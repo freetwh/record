@@ -1,0 +1,6 @@
+<!--miniprogram/pages/publish/publish.wxml-->
+<view class="publish-list">
+    <view class="publish-button" bindtap="handleUploadVideo">上传视频</view>
+    <view class="publish-button" bindtap="handleUploadImage">上传图片</view>
+    <view class="publish-button" bindtap="handleUploadNote">上传日记</view>
+</view>

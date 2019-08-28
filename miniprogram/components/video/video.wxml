@@ -1,0 +1,5 @@
+<!--components/video/video.wxml-->
+<view class="video-item">
+  <image class="video-cover" mode="widthFix" src="../../images/owner/background_01.jpg"></image>
+  <image class="play-button" mode="widthFix" src="../../images/play.png"></image>
+</view>

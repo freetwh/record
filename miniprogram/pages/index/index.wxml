@@ -1,0 +1,46 @@
+<!--index.wxml-->
+<view class="container">
+  <view class="owner-box">
+    <image class="owner-background" mode="widthFix" src="{{ owner.backgroundImage }}"></image>
+    <image class="owner-avatar" mode="aspectFill" src="{{ owner.avatar }}"></image>
+    <view class="owner-info">
+      <text class="owner-nickname">{{ owner.nickname }}</text>
+      <view class="owner-points">
+        <view class="sweaty-days">心动 <text>{{ sweatyDays }}</text>  天</view>
+        <text class="points-text">积分: </text>
+        <text class="points-number">{{ owner.points }}</text>
+      </view>
+
+    </view>
+  </view>
+  <view class="menu-bar">
+    <!-- <view class="menu-item {{ activeMenu == 'videos' ? 'active' : '' }}" bindtap="handleMenuClick" data-value="videos">视频</view> -->
+    <!-- <view class="menu-item {{ activeMenu == 'photos' ? 'active' : '' }}" bindtap="handleMenuClick" data-value="photos">照片</view> -->
+    <view class="menu-item {{ activeMenu == 'notes' ? 'active' : '' }}" bindtap="handleMenuClick" data-value="notes">日记</view>
+  </view>
+  <!-- 内容列表 begin -->
+  <view class="contents-wrap">
+    <!-- 视频 -->
+    <view wx:if="{{ activeMenu == 'videos' }}" class="videos-box contents-list">
+      <video-item class="list-item" wx:for="{{ videos }}" wx:for-item="video" wx:key="index"></video-item>
+      <view class="list-item"></view>
+      <view class="list-item"></view>
+    </view>
+    <!-- 图片 -->
+    <view wx:if="{{ activeMenu == 'photos' }}" class="photos-box contents-list">
+      <image class="photo-item list-item" wx:for="{{ photos }}" wx:for-item="photo" wx:key="index" src="{{ '../../images/photos/'+ (index + 1) +'.jpg' }}" mode="aspectFill"></image>
+      <view class="list-item"></view>
+      <view class="list-item"></view>
+    </view>
+    <!-- 日记 -->
+    <view wx:if="{{ activeMenu == 'notes' }}" class="notes-box">
+      <note-item wx:for="{{ notes }}" wx:for-item="note" note="{{ note }}" wx:key="index"></note-item>
+    </view>
+  </view>
+  <!-- 内容列表 end -->
+
+  <!-- 发表内容 -->
+  <navigator url="../publish/publish">
+    <cover-image class="publish-button" src="../../images/add.png"></cover-image>
+  </navigator>
+</view>

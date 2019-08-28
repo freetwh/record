@@ -1,0 +1,14 @@
+/* miniprogram/pages/publish/publish.wxss */
+.publish-list {
+  text-align: center;
+  padding: 80rpx;
+}
+.publish-button {
+  padding: 20rpx 60rpx;
+  background: rgba(50, 50, 50, .8);
+  text-align: center;
+  border-radius: 5px;
+  font-size: 28rpx;
+  color: #fff;
+  margin: 20rpx;
+}

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "video-item": "../../components/video/video",
+    "note-item": "../../components/note/note"
+  }
+}

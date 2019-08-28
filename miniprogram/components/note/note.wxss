@@ -1,0 +1,25 @@
+/* components/note/note.wxss */
+.note-item {
+  margin: 30rpx;
+  background: #fff;
+  padding: 20rpx;
+  box-shadow: 0 2px 4px rgba(200, 200, 200, .2);
+  overflow: hidden;
+}
+.note-title {
+  display: block;
+  font-weight: bold;
+  font-size: 30rpx;
+  line-height: 1;
+  margin-right: 20rpx;
+  color: #c46ae3;
+  float: left;
+}
+.note-content {
+  display: block;
+  font-size: 24rpx;
+  color: #666;
+  line-height: 40rpx;
+  /* height: 80rpx;
+  text-overflow: ellipsis; */
+}

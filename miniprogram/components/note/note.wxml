@@ -1,0 +1,5 @@
+<!--components/note/note.wxml-->
+<view class="note-item">
+  <text class="note-title">{{ note.created_time }}</text>
+  <text class="note-content">{{ note.content }}</text>
+</view>
